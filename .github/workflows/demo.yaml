@@ -8,6 +8,13 @@ on:
     branches:
       - main
   workflow_dispatch: 
+    inputs: 
+      name:
+        description: "cluster-name"
+        type: String
+        required: true
+        default: "GKE-cluster"
+      
 
 permissions: {}
 
