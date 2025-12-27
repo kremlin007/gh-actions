@@ -23,10 +23,10 @@ jobs:
     name: "job1"
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{inputs.cluster-name}}"
+      - run: echo "${{ inputs.cluster-name }}"
 
   job2:
     name: job2
     runs-on: windows-latest
     steps:
-      - run: echo "${{inputs.cluster-name}}"
+      - run: echo "${{ inputs.cluster-name }}"
