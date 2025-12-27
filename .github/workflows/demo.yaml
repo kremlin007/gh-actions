@@ -14,6 +14,11 @@ on:
         type: string
         required: true
         default: "GKE-cluster"
+      version:
+        description: "cluster-version"
+        type: string
+        required: true
+        default: "1.33"
 
 permissions: {}
 
@@ -24,6 +29,8 @@ jobs:
     steps:
       - name: Print cluster name
         run: echo "${{ github.event.inputs.name || 'GKE-cluster' }}"
+      - name: Print cluster version
+        run: echo "${{ github.event.inputs.version || '1.24' }}"
 
   job2:
     name: job2
@@ -31,3 +38,5 @@ jobs:
     steps:
       - name: Print cluster name
         run: echo "${{ github.event.inputs.name || 'GKE-cluster' }}"
+      - name: Print cluster version
+        run: echo "${{ github.event.inputs.version || '1.24' }}"
